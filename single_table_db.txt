@@ -1,0 +1,8 @@
+-- DB NAME : single_table_db
+-- SCHEMA : single_table_schema
+
+CREATE TABLE items (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT
+);
