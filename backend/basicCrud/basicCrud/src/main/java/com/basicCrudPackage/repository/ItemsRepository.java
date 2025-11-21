@@ -9,7 +9,12 @@ import com.basicCrudPackage.model.Items;
 
 @Repository
 public class ItemsRepository {
-    ItemsMapper itemsMapper;
+
+    private final ItemsMapper itemsMapper;
+
+    public ItemsRepository(ItemsMapper itemsMapper){
+        this.itemsMapper = itemsMapper;
+    }
 
     public List<Items> getAllItems(){
         return itemsMapper.getAllItems();
