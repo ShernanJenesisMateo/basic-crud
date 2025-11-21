@@ -3,6 +3,7 @@ package com.basicCrudPackage.controller;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,7 @@ public class ItemsController {
         this.itemsService = itemsService;
     }
 
+    @GetMapping("/all")
     public ResponseEntity<List<Items>> getAllItems(){
         return ResponseEntity.ok(itemsService.getAllItems());
     }
