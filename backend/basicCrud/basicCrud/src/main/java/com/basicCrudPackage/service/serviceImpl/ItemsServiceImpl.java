@@ -6,9 +6,10 @@ import org.springframework.stereotype.Service;
 
 import com.basicCrudPackage.model.Items;
 import com.basicCrudPackage.repository.ItemsRepository;
+import com.basicCrudPackage.service.ItemsService;
 
 @Service
-public class ItemsServiceImpl {
+public class ItemsServiceImpl implements ItemsService {
     private final ItemsRepository itemsRepository;
 
     public ItemsServiceImpl(ItemsRepository itemsRepository){
